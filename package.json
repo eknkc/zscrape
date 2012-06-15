@@ -1,0 +1,25 @@
+{
+  "name": "zscrape",
+  "description": "jQuery and JSDom based website scraping library",
+  "homepage": "https://github.com/eknkc/zscrape",
+  "author": {
+    "name": "Ekin Koc",
+    "email": "ekin@eknkc.com"
+  },
+  "version": "1.0.9",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eknkc/zscrape.git"
+  },
+  "dependencies": {
+    "jsdom"        : "",
+    "iconv"        : "",
+    "request"      : ""
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
