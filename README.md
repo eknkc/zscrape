@@ -21,8 +21,11 @@ ZScrape exports a single function, which accepts three arguments;
     zscrape({
         url: "http://www.google.com",
         maxlength: 1024 * 1024
-    }, function($) {
-        return $("title").text();
+    }, function($, window) {
+        return {
+            title: $("title").text(),
+            url: window.zscrape.href
+        }
     }, function(err, data) {
         console.log([err, data]);
     });
@@ -31,7 +34,7 @@ ZScrape exports a single function, which accepts three arguments;
   * `url`: The request URL of the web page to be parsed
   * `maxlength`: Maximum length of file in bytes to be processed
   * `headers`: Object containing optional request headers
- * `parser`: The parser function to be executed within the page. A jQuery instance is passed as single argument and whatever gets returned is proxied back to the handler.
+ * `parser`: The parser function to be executed within the page. A jQuery instance is passed as the first argument and whatever gets returned is proxied back to the handler.
  * `handler`: Handler function that is called in case of an error or successful completion. In case of no errors, second argument is populated with the data returned by parser function.
 
 
