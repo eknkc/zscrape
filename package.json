@@ -6,14 +6,14 @@
     "name": "Ekin Koc",
     "email": "ekin@eknkc.com"
   },
-  "version": "1.1.8",
+  "version": "1.1.9",
   "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:eknkc/zscrape.git"
   },
   "dependencies": {
-    "jsdom"        : "",
+    "jsdom"        : ">=0.7.0",
     "iconv"        : "",
     "request"      : ""
   },
